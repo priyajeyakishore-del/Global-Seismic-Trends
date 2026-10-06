@@ -10,6 +10,8 @@ https://github.com/priyajeyakishore-del/Global-Seismic-Trends/tree/main/sql
 ## To Run:
 python -m streamlit run streamlit_app.py
 
+## Streamlit Dashboard Screenshots:
+
 ## 📊 Earthquake Overview
 <img width="1920" height="3293" alt="image" src="https://github.com/user-attachments/assets/92be52e7-77a0-4d91-ac2c-f3ae7f8a38d1" />
 
