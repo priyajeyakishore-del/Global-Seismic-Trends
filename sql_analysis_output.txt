@@ -1,0 +1,421 @@
+
+============================================================
+BASIC DATASET INFORMATION
+============================================================
+total_earthquakes: 137265
+strongest_magnitude: 8.8
+deepest_depth: 683.578
+total_tsunamis: 585
+
+============================================================
+DATA ANALYSIS TASK
+============================================================
+
+
+ * Magnitude & Depth Analysis * 
+
+
+======================================================================
+1. TOP 10 STRONGEST EARTHQUAKES
+======================================================================
+           id                time                            country  mag  depth_km
+0  us6000qw60 2025-07-29 23:24:52                  Russia Earthquake  8.8    35.000
+1  us7000qx2g 2025-09-18 18:58:15                             Russia  7.8    27.000
+2  us6000tkt2 2026-08-14 21:58:22                          Indonesia  7.8    10.000
+3  us7000srb1 2026-06-07 23:37:42                        Philippines  7.8    56.991
+4  us6000jllz 2023-02-06 01:17:34  Kahramanmaras earthquake sequence  7.8    10.000
+5  us6000kd0n 2023-05-19 02:57:03                            Unknown  7.7    18.053
+6  us7000pn9s 2025-03-28 06:20:53         Burma (Myanmar) Earthquake  7.7    10.000
+7  us7000pcdl 2025-02-08 23:23:15                     Cayman Islands  7.6    14.326
+8  us6000rgf4 2025-10-10 20:29:20                            Unknown  7.6     5.639
+9  us6000kawn 2023-05-10 16:02:00                              Tonga  7.6   210.000
+
+======================================================================
+2. TOP 10 DEEPEST EARTHQUAKES
+======================================================================
+           id                time  country  mag  depth_km
+0  us6000sp3p 2026-04-02 16:59:18  Vanuatu  4.0   683.578
+1  us6000k2db 2023-04-01 18:09:17  Vanuatu  4.0   681.238
+2  us7000kxdn 2023-09-18 15:35:27  Unknown  4.2   675.265
+3  us6000mivr 2024-03-08 22:42:24  Unknown  4.2   671.043
+4  us6000rk66 2025-10-29 17:07:34     Fiji  4.8   669.556
+5  us7000q1jk 2025-05-10 02:03:17     Fiji  4.2   667.237
+6  us7000s0st 2026-02-14 08:27:48     Fiji  4.3   667.197
+7  us6000ta9m 2026-07-05 14:22:25     Fiji  5.7   665.993
+8  us6000tknp 2026-08-10 16:50:10  Vanuatu  4.0   665.326
+9  us7000he64 2022-06-01 18:41:01     Fiji  4.3   664.700
+
+======================================================================
+3. SHALLOW EARTHQUAKES (< 50 KM) WITH MAGNITUDE > 7.5
+======================================================================
+            id  mag  ...                            country                time
+0   us6000qw60  8.8  ...                  Russia Earthquake 2025-07-29 23:24:52
+1   us6000jllz  7.8  ...  Kahramanmaras earthquake sequence 2023-02-06 01:17:34
+2   us7000qx2g  7.8  ...                             Russia 2025-09-18 18:58:15
+3   us6000tkt2  7.8  ...                          Indonesia 2026-08-14 21:58:22
+4   us6000kd0n  7.7  ...                            Unknown 2023-05-19 02:57:03
+5   us7000pn9s  7.7  ...         Burma (Myanmar) Earthquake 2025-03-28 06:20:53
+6   us7000i9bw  7.6  ...                             Mexico 2022-09-19 18:05:08
+7   us7000lff4  7.6  ...                        Philippines 2023-12-02 14:37:04
+8   us7000pcdl  7.6  ...                     Cayman Islands 2025-02-08 23:23:15
+9   us6000rgf4  7.6  ...                            Unknown 2025-10-10 20:29:20
+10  us6000rtdt  7.6  ...                   Japan Earthquake 2025-12-08 14:15:10
+
+[11 rows x 6 columns]
+
+======================================================================
+5. AVERAGE MAGNITUDE PER MAGNITUDE TYPE
+======================================================================
+       magType  earthquake_count  average_magnitude
+0          mwc                 1               7.00
+1        ms_20                 1               5.80
+2          mwb                27               5.77
+3          mww              6460               5.35
+4          mwp                 1               5.25
+5        ms_vx                 4               4.65
+6           mb             73500               4.42
+7          mwr              2534               4.32
+8           mw               560               3.92
+9          mlr                 8               3.49
+10         mlg                 1               3.30
+11         mlv                11               3.10
+12          md             11755               3.05
+13          ml             41813               2.90
+14          mh                15               2.88
+15  ml(texnet)               145               2.88
+16       mb_lg               429               2.77
+
+ * Time Analysis * 
+
+
+======================================================================
+6. YEAR WITH MOST EARTHQUAKES
+======================================================================
+   year  earthquake_count
+0  2025             29216
+
+======================================================================
+7. MONTH WITH HIGHEST NUMBER OF EARTHQUAKES
+======================================================================
+   month_number month_name  earthquake_count
+0             7       July             13338
+
+======================================================================
+8. DAY OF WEEK WITH MOST EARTHQUAKES
+======================================================================
+  day_of_week  earthquake_count
+0     Tuesday             19829
+
+======================================================================
+9. EARTHQUAKES PER HOUR
+======================================================================
+    hour_of_day  earthquake_count
+0             0              5704
+1             1              5981
+2             2              5838
+3             3              5970
+4             4              6081
+5             5              5690
+6             6              5643
+7             7              5726
+8             8              5853
+9             9              5716
+10           10              5576
+11           11              5464
+12           12              5423
+13           13              5578
+14           14              5542
+15           15              5731
+16           16              5574
+17           17              5650
+18           18              5603
+19           19              5636
+20           20              5751
+21           21              5951
+22           22              5880
+23           23              5704
+
+======================================================================
+10. MOST ACTIVE REPORTING NETWORK
+======================================================================
+  net  earthquake_count
+0  us            104476
+
+ * Event Type & Quality Metrics * 
+
+
+======================================================================
+14. REVIEWED VS AUTOMATIC EARTHQUAKES
+======================================================================
+      status  earthquake_count
+0   reviewed            136522
+1  automatic               743
+
+======================================================================
+15. COUNT BY EARTHQUAKE TYPE
+======================================================================
+                      type  earthquake_count
+0               earthquake            136118
+1         mining explosion              1010
+2                ice quake                81
+3                explosion                16
+4        volcanic eruption                12
+5              other event                 9
+6             quarry blast                 8
+7                landslide                 7
+8   experimental explosion                 2
+9            mine collapse                 1
+10    accidental explosion                 1
+
+======================================================================
+16. NUMBER OF EARTHQUAKES BY DATA TYPE
+======================================================================
+                                                 types  earthquake_count
+0                                  ,origin,phase-data,            104195
+1                             ,dyfi,origin,phase-data,             10802
+2                  ,earthquake-name,origin,phase-data,              2571
+3                         ,origin,phase-data,shakemap,              2461
+4    ,dyfi,focal-mechanism,nearby-cities,origin,pha...              2175
+..                                                 ...               ...
+549  ,associate,dyfi,earthquake-name,finite-fault,g...                 1
+550  ,dyfi,event-sequence,moment-tensor,oaf,origin,...                 1
+551  ,dyfi,event-sequence,focal-mechanism,moment-te...                 1
+552  ,dyfi,general-header,general-text,impact-text,...                 1
+553  ,dyfi,event-sequence,nearby-cities,oaf,origin,...                 1
+
+[554 rows x 2 columns]
+
+======================================================================
+18. EVENTS WITH HIGH STATION COVERAGE (NST > 46.00)
+======================================================================
+               id    nst   mag    country                time
+0      us6000m12f  619.0  5.40      Japan 2024-01-02 01:17:32
+1      us6000qzfl  566.0  5.00     Russia 2025-08-09 08:01:41
+2      us7000rluk  516.0  5.70     Alaska 2026-01-01 06:46:55
+3      us7000pvtr  475.0  6.80    Unknown 2025-04-29 14:53:38
+4      usd001097k  466.0  5.50  Argentina 2023-12-11 18:36:00
+...           ...    ...   ...        ...                 ...
+33925  us6000kde9   47.0  2.60     Alaska 2023-05-17 04:58:17
+33926  us6000kdwe   47.0  4.30    Unknown 2023-05-17 19:56:32
+33927  nc73889641   47.0  3.72         CA 2023-05-18 15:55:54
+33928  us7000k3t2   47.0  4.30      Tonga 2023-05-19 18:35:35
+33929  hv73410132   47.0  3.00     Hawaii 2023-05-19 21:07:49
+
+[33930 rows x 5 columns]
+75th percentile (Q3) of NST: 46.00
+
+ * Tsunamis & Alerts * 
+
+
+======================================================================
+19. TSUNAMIS TRIGGERED PER YEAR
+======================================================================
+   year  tsunami_count
+0  2021             39
+1  2022            136
+2  2023            119
+3  2024            114
+4  2025            142
+5  2026             35
+
+======================================================================
+20. EARTHQUAKES BY ALERT LEVEL
+======================================================================
+    alert  earthquake_count
+0   green              3939
+1  yellow               123
+2     red                25
+3  orange                23
+
+ * Seismic Pattern & Trends Analysis. * 
+
+
+======================================================================
+21. TOP 5 COUNTRIES BY AVERAGE MAGNITUDE - PAST 5 YEARS
+======================================================================
+                             country  average_magnitude  earthquake_count
+0                  Russia Earthquake               8.10                 2
+1         Burma (Myanmar) Earthquake               7.70                 1
+2  Kahramanmaras earthquake sequence               7.65                 2
+3                  Alaska Earthquake               7.25                 2
+4                   Japan Earthquake               7.25                 4
+
+======================================================================
+22. COUNTRIES WITH BOTH SHALLOW AND DEEP EARTHQUAKES IN SAME MONTH
+======================================================================
+               country  year  month  shallow_depth_km  deep_depth_km
+0          Afghanistan  2022     10            11.835        300.149
+1            Argentina  2021     10            10.000        611.460
+2            Argentina  2021     11            10.000        576.180
+3            Argentina  2021     12             9.410        593.040
+4            Argentina  2022      5            10.000        571.990
+..                 ...   ...    ...               ...            ...
+590  Wallis and Futuna  2025      8            10.000        414.820
+591  Wallis and Futuna  2025     12            10.000        438.779
+592  Wallis and Futuna  2026      5            10.000        439.827
+593  Wallis and Futuna  2026      6             9.219        417.534
+594  Wallis and Futuna  2026      7            10.000        373.470
+
+[595 rows x 5 columns]
+
+======================================================================
+23. YEAR-OVER-YEAR EARTHQUAKE GROWTH RATE
+======================================================================
+   year  earthquake_count yoy_growth_rate
+0  2021              8881            None
+1  2022             26911          203.02
+2  2023             27301            1.45
+3  2024             25153           -7.87
+4  2025             29216           16.15
+5  2026             19803          -32.22
+
+======================================================================
+24. TOP 3 SEISMICALLY ACTIVE REGIONS
+======================================================================
+     country  earthquake_count  average_magnitude
+0     Alaska             30637               3.02
+1  Indonesia              8383               4.50
+2     Russia              6196               4.47
+
+ * Depth, Location & Distance-Based  Analysis. * 
+
+
+======================================================================
+25. AVERAGE DEPTH BY COUNTRY WITHIN ±5° LATITUDE OF EQUATOR
+======================================================================
+                             country  average_depth_km
+0                        Philippines            107.29
+1                   Papua New Guinea             71.67
+2                               Peru             64.88
+3                            Ecuador             62.30
+4                          Indonesia             61.78
+5                           Colombia             46.40
+6                       Congo-Uganda             14.78
+7                          Venezuela             11.13
+8                             Brazil             10.83
+9                           Malaysia             10.76
+10                            Uganda             10.08
+11                            Rwanda             10.00
+12                          Tanzania             10.00
+13                           Burundi             10.00
+14                             Palau             10.00
+15                          Ethiopia             10.00
+16                             Gabon             10.00
+17                   Kiribati region             10.00
+18                       South Sudan             10.00
+19                    Ecuador region              9.99
+20  Democratic Republic of the Congo              9.87
+21                             Kenya              9.80
+
+======================================================================
+26. COUNTRIES WITH HIGHEST SHALLOW/DEEP EARTHQUAKE RATIO
+======================================================================
+                     country shallow_earthquakes deep_earthquakes shallow_to_deep_ratio
+0                      China                1277                1               1277.00
+1                       Peru                 494                1                494.00
+2                       Guam                 388                1                388.00
+3                Afghanistan                 220                1                220.00
+4            Solomon Islands                 608                7                 86.86
+5                New Zealand                 792               10                 79.20
+6                     Russia                4617               92                 50.18
+7                    Vanuatu                 888               29                 30.62
+8                Philippines                2773              106                 26.16
+9           Papua New Guinea                1762               68                 25.91
+10                     Japan                3030              120                 25.25
+11                 Indonesia                5059              252                 20.08
+12                     Italy                 126               11                 11.45
+13                 Argentina                 230               34                  6.76
+14              Japan region                1276              233                  5.48
+15  Northern Mariana Islands                 546              116                  4.71
+16                     Tonga                1419              554                  2.56
+17                  Malaysia                   4                3                  1.33
+18                    Brazil                  13               13                  1.00
+19                   Bolivia                  17               17                  1.00
+20               Timor Leste                 147              194                  0.76
+21         Wallis and Futuna                  64              137                  0.47
+22                      Fiji                 105             1081                  0.10
+23               North Korea                   0                3                  0.00
+
+======================================================================
+27. AVERAGE MAGNITUDE DIFFERENCE: TSUNAMI VS NON-TSUNAMI
+======================================================================
+   avg_mag_with_tsunami  avg_mag_without_tsunami  average_magnitude_difference
+0                  5.38                     3.86                          1.52
+
+======================================================================
+28. EVENTS WITH LOWEST DATA RELIABILITY
+======================================================================
+               id                                          place  ...     gap  reliability_error_score
+0      pr71519528     95 km ENE of Cruz Bay, U.S. Virgin Islands  ...  359.00                   359.14
+1      nn00897599                      60 km NE of Valmy, Nevada  ...  358.18                   358.34
+2    pr2024051000     77 km NW of Sandy Ground Village, Anguilla  ...  358.00                   358.16
+3      pr71506398     73 km ENE of Cruz Bay, U.S. Virgin Islands  ...  358.00                   358.07
+4      pr71508583    86 km WNW of Sandy Ground Village, Anguilla  ...  356.00                   356.22
+5   aka2026fwzivr                                south of Alaska  ...  354.00                   354.70
+6    pr2022227000     59 km ENE of Cruz Bay, U.S. Virgin Islands  ...  353.00                   353.61
+7      us7000pelq                       106 km S of Atka, Alaska  ...  353.00                   353.47
+8      pr71489653  53 km SSW of Boca de Yuma, Dominican Republic  ...  352.00                   352.18
+9    pr2022289000       78 km E of Cruz Bay, U.S. Virgin Islands  ...  352.00                   352.07
+10   pr2022311006      58 km NE of Cruz Bay, U.S. Virgin Islands  ...  351.00                   351.17
+11     us7000jgwv    Andreanof Islands, Aleutian Islands, Alaska  ...  350.00                   350.68
+12     us6000k2l1                       17 km SE of Atka, Alaska  ...  350.00                   350.24
+13     av91047508          Rat Islands, Aleutian Islands, Alaska  ...  350.00                   350.10
+14     us6000hljr          Fox Islands, Aleutian Islands, Alaska  ...  349.00                   350.06
+15   pr2022230002       10 km N of Cruz Bay, U.S. Virgin Islands  ...  350.00                   350.03
+16   ak2025riyqfg             249 km ESE of Attu Station, Alaska  ...  349.00                   349.90
+17   pr2022031001     69 km ESE of Cruz Bay, U.S. Virgin Islands  ...  349.00                   349.62
+18   pr2021274004       68 km E of Cruz Bay, U.S. Virgin Islands  ...  349.00                   349.50
+19     us7000glrf          Rat Islands, Aleutian Islands, Alaska  ...  349.00                   349.47
+
+[20 rows x 7 columns]
+
+======================================================================
+29. CONSECUTIVE EARTHQUAKES WITHIN 50 KM AND 1 HOUR
+======================================================================
+      previous_id          id       previous_time  ...  mag  time_difference_hours  distance_km
+0      us7000f6z7  us7000f6zb 2021-09-02 06:05:22  ...  4.9                   0.20         3.77
+1      us7000fc70  us7000f703 2021-09-02 08:07:38  ...  4.6                   0.02         3.23
+2      us7000f7cc  us7000f9yk 2021-09-03 05:22:58  ...  4.8                   0.19        15.56
+3      us7000f9yk  us7000f7cy 2021-09-03 05:34:17  ...  4.8                   0.10        35.89
+4      tx2021rgbr  tx2021rgdc 2021-09-03 05:45:50  ...  2.6                   0.72         1.34
+...           ...         ...                 ...  ...  ...                    ...          ...
+10734  us7000tcf3  us7000tdxv 2026-08-27 21:07:38  ...  4.3                   0.35        23.06
+10735  us7000tdxv  us7000tdxw 2026-08-27 21:28:49  ...  4.3                   0.15        14.73
+10736  us7000td4m  us7000td4n 2026-08-29 02:58:44  ...  2.6                   0.59         7.52
+10737  us7000tcsr  us7000tcss 2026-08-29 07:48:38  ...  2.9                   0.01        36.81
+10738  us7000tebp  us7000tebn 2026-08-30 10:13:08  ...  4.4                   0.08         5.30
+
+[10739 rows x 12 columns]
+
+======================================================================
+30. REGIONS WITH HIGHEST FREQUENCY OF DEEP-FOCUS EARTHQUAKES
+======================================================================
+                     country  deep_earthquake_count
+0                       Fiji                   1081
+1                      Tonga                    554
+2                  Indonesia                    252
+3               Japan region                    233
+4                Timor Leste                    194
+5          Wallis and Futuna                    137
+6                      Japan                    120
+7   Northern Mariana Islands                    116
+8                Philippines                    106
+9                     Russia                     92
+10          Papua New Guinea                     68
+11                 Argentina                     34
+12                   Vanuatu                     29
+13                   Bolivia                     17
+14                    Brazil                     13
+15                     Italy                     11
+16               New Zealand                     10
+17           Solomon Islands                      7
+18               North Korea                      3
+19                  Malaysia                      3
+20                      Guam                      1
+21               Afghanistan                      1
+22                     China                      1
+23                      Peru                      1
+
+======================================================================
+SQL ANALYSIS TASKS COMPLETED SUCCESSFULLY
+======================================================================

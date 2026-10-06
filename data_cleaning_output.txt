@@ -1,0 +1,143 @@
+======================================================================
+RAW DATA
+
+======================================================================
+Rows: 137265
+Columns: 27
+
+================================================================================
+DROP COMPLETELY EMPTY COLUMNS
+
+================================================================================
+
+Completely empty columns:
+['magError', 'depthError', 'magNst', 'locationSource', 'magSource']
+Columns after removing empty columns: 22
+
+================================================================================
+HANDLE HIGH MISSING VALUES
+
+================================================================================
+
+Missing value percentage:
+alert    97.005792
+nst      14.612611
+dmin      7.094307
+gap       5.014388
+rms       0.003643
+dtype: float64
+
+Alert column missing: 97.01%
+Alert column has very high missing values.
+Decision: KEEP alert column for specialized alert-level analysis.
+
+================================================================================
+IMPUTE PARTIAL MISSING VALUES
+
+================================================================================
+
+Imputing missing values for 'nst' column...
+
+nst missing before: 20,058
+nst missing after: 0
+
+Imputing missing values for 'dmin' column...
+
+dmin missing before: 9,738
+dmin missing after: 0
+
+Imputing missing values for 'gap' column...
+
+gap missing before: 6,883
+gap missing after: 0
+
+================================================================================
+RANGE & DOMAIN VALIDATION
+
+================================================================================
+
+Validating depth values...
+
+Negative depth values: 381
+Decision: Keep negative depth values for now, as they may represent valid geological phenomena.
+Impossible depth values (>1000 km): 0
+No impossible depth values found. No action needed.
+
+Validating magnitude values...
+Invalid magnitude values: 0
+no invalid magnitude values found. No action needed.
+
+Validating latitude values...
+Invalid latitude values: 0
+No invalid latitude values found. No action needed.
+
+Validating longitude values...
+Invalid longitude values: 0
+No invalid longitude values found. No action needed.
+
+================================================================================
+OUTLIER ANALYSIS
+
+================================================================================
+
+IQR Outlier Detection Report:
+  Column   Q1      Q3    IQR  Lower Limit  Upper Limit  Outlier Count  Outlier %
+     mag  3.0   4.500  1.500        0.750         6.75            115       0.08
+depth_km 10.0  58.908 48.908      -63.362       132.27          15917      11.60
+     gap 77.0 175.000 98.000      -70.000       322.00            504       0.37
+Decision: RETAIN statistical outliers because they may represent genuine earthquake characteristics.
+
+================================================================================
+TEXT FIELD CLEANING
+
+================================================================================
+
+Text field cleaning completed.
+Decision: RETAIN cleaned text fields for analysis.
+
+Place field cleaning completed.
+
+Country field extraction completed.
+Decision: RETAIN country field for analysis.
+sample countries: <ArrowStringArray>
+[     'Hawaii', 'Puerto Rico', 'New Zealand',       'Texas',       'Yemen',
+     'Unknown',   'Indonesia',      'Alaska',       'Tonga',  'New Mexico']
+Length: 10, dtype: string
+
+================================================================================
+DERIVED FIELDS
+
+================================================================================
+Total columns before derived fields: 23
+
+Derived fields for year, month, day, hour, and day of week created.
+Total columns after derived fields from time: 29
+
+Depth category derived field created.
+Total columns after derived fields for depth: 30
+
+Strong quake derived field created.
+Total columns after derived fields for strong_quake: 31
+
+Tsunami indicator derived field created.
+Total columns after derived fields for tsunami_indicator: 32
+
+Magnitude category derived field created.
+Total columns after derived fields for magnitude_category: 33
+
+Data cleaning and transformation completed.
+
+================================================================================
+FINAL CLEANED DATA VALIDATION
+
+================================================================================
+Final records: 137,265
+Final columns: 33
+duplicate rows: 0
+missing values: 133160
+timestamp range: 2021-09-01 00:18:15.990000 to 2026-08-31 23:16:53.715000
+
+================================================================================
+✅ DATA CLEANING & TRANSFORMATION COMPLETED
+
+================================================================================

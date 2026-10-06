@@ -1,0 +1,208 @@
+
+================================================================================
+1. BASIC STRUCTURE CHECKS
+================================================================================
+Number of rows    : 137,265
+Number of columns : 27
+
+Column names:
+ 1. id
+ 2. time
+ 3. updated
+ 4. latitude
+ 5. longitude
+ 6. depth_km
+ 7. mag
+ 8. magType
+ 9. place
+10. status
+11. tsunami
+12. sig
+13. net
+14. nst
+15. dmin
+16. rms
+17. gap
+18. magError
+19. depthError
+20. magNst
+21. locationSource
+22. magSource
+23. types
+24. ids
+25. sources
+26. type
+27. alert
+
+DataFrame information:
+<class 'pandas.DataFrame'>
+RangeIndex: 137265 entries, 0 to 137264
+Data columns (total 27 columns):
+ #   Column          Non-Null Count   Dtype         
+---  ------          --------------   -----         
+ 0   id              137265 non-null  str           
+ 1   time            137265 non-null  datetime64[ms]
+ 2   updated         137265 non-null  datetime64[ms]
+ 3   latitude        137265 non-null  float64       
+ 4   longitude       137265 non-null  float64       
+ 5   depth_km        137265 non-null  float64       
+ 6   mag             137265 non-null  float64       
+ 7   magType         137265 non-null  str           
+ 8   place           137265 non-null  str           
+ 9   status          137265 non-null  str           
+ 10  tsunami         137265 non-null  int64         
+ 11  sig             137265 non-null  int64         
+ 12  net             137265 non-null  str           
+ 13  nst             117207 non-null  float64       
+ 14  dmin            127527 non-null  float64       
+ 15  rms             137260 non-null  float64       
+ 16  gap             130382 non-null  float64       
+ 17  magError        0 non-null       float64       
+ 18  depthError      0 non-null       float64       
+ 19  magNst          0 non-null       float64       
+ 20  locationSource  0 non-null       float64       
+ 21  magSource       0 non-null       float64       
+ 22  types           137265 non-null  str           
+ 23  ids             137265 non-null  str           
+ 24  sources         137265 non-null  str           
+ 25  type            137265 non-null  str           
+ 26  alert           4110 non-null    str           
+dtypes: datetime64[ms](2), float64(13), int64(2), str(10)
+memory usage: 42.6 MB
+None
+
+================================================================================
+2. DATA TYPE VALIDATION
+================================================================================
+        Column Expected Type    Actual Type  Non-Null Valid
+            id        string            str    137265   Yes
+       magType        string            str    137265   Yes
+         place        string            str    137265   Yes
+        status        string            str    137265   Yes
+           net        string            str    137265   Yes
+         types        string            str    137265   Yes
+           ids        string            str    137265   Yes
+       sources        string            str    137265   Yes
+          type        string            str    137265   Yes
+         alert        string            str      4110   Yes
+          time      datetime datetime64[ms]    137265   Yes
+       updated      datetime datetime64[ms]    137265   Yes
+      latitude       numeric        float64    137265   Yes
+     longitude       numeric        float64    137265   Yes
+      depth_km       numeric        float64    137265   Yes
+           mag       numeric        float64    137265   Yes
+           nst       numeric        float64    117207   Yes
+          dmin       numeric        float64    127527   Yes
+           rms       numeric        float64    137260   Yes
+           gap       numeric        float64    130382   Yes
+       tsunami       integer          int64    137265   Yes
+           sig       integer          int64    137265   Yes
+      magError         empty        float64         0   Yes
+    depthError         empty        float64         0   Yes
+        magNst         empty        float64         0   Yes
+locationSource         empty        float64         0   Yes
+     magSource         empty        float64         0   Yes
+
+================================================================================
+3️⃣ RANGE & DOMAIN CHECKS
+================================================================================
+
+================================================================================
+🔢 NUMERIC RANGE VALIDATION REPORT
+================================================================================
+   Column Expected Range  Actual Min  Actual Max  Invalid Values Valid
+ latitude      -90 to 90    -84.4932     87.0815               0   Yes
+longitude    -180 to 180   -179.9997    179.9994               0   Yes
+ depth_km   -100 to 1000     -3.7400    683.5780               0   Yes
+      mag       -1 to 10      2.5000      8.8000               0   Yes
+
+Domain Validation:
+✅ tsunami: Valid
+✅ status: Valid
+✅ magType: Valid
+
+================================================================================
+4️⃣ MISSING VALUES
+================================================================================
+        Column  Missing Count  Missing %
+      magError         137265     100.00
+    depthError         137265     100.00
+     magSource         137265     100.00
+        magNst         137265     100.00
+locationSource         137265     100.00
+         alert         133155      97.01
+           nst          20058      14.61
+          dmin           9738       7.09
+           gap           6883       5.01
+           rms              5       0.00
+
+================================================================================
+5️⃣ CONSISTENCY CHECKS
+================================================================================
+Duplicate rows          : 0
+✅ No duplicate rows found.
+Duplicate earthquake IDs: 0
+✅ Earthquake IDs are unique.
+Invalid date/time values: 0
+✅ All date/time values are valid.
+Updated before event time: 0
+✅ Event/update timestamps are consistent.
+Records missing both magnitude and depth: 0
+✅ Magnitude/depth availability is consistent.
+Invalid geographic coordinates: 0
+✅ Geographic coordinates are valid.
+
+================================================================================
+6️⃣ OUTLIER DETECTION
+================================================================================
+
+IQR Outlier Detection Report:
+  Column   Q1      Q3     IQR  Lower Limit  Upper Limit  Outlier Count  Outlier %
+     mag  3.0   4.500   1.500        0.750         6.75            115       0.08
+depth_km 10.0  58.908  48.908      -63.362       132.27          15917      11.60
+     gap 75.0 180.000 105.000      -82.500       337.50            146       0.11
+
+================================================================================
+7️⃣ RECORD COUNT VERIFICATION
+================================================================================
+Total records in dataset: 137,265
+Unique earthquake IDs    : 137,265
+✅ Record count matches unique earthquake IDs.
+
+Earthquake records by year:
+time
+2021     8881
+2022    26911
+2023    27301
+2024    25153
+2025    29216
+2026    19803
+
+================================================================================
+🎯 OVERALL DATA QUALITY CONCLUSION
+================================================================================
+
+The raw earthquake dataset contains 137,265 records
+and 27 columns.
+
+The validation process checked:
+
+✓ Dataset structure
+✓ Data types
+✓ Geographic and magnitude ranges
+✓ Domain values
+✓ Missing values
+✓ Duplicate records and IDs
+✓ Timestamp consistency
+✓ Magnitude/depth availability
+✓ Geographic coordinates
+✓ Statistical outliers using IQR
+✓ Record counts and yearly distribution
+
+The identified missing values, empty fields and statistical
+outliers should be investigated during the data-cleaning stage.
+
+
+================================================================================
+✅ DATA QUALITY VALIDATION COMPLETED
+================================================================================
