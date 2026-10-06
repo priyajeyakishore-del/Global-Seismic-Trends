@@ -1,6 +1,12 @@
 # Global-Seismic-Trends
 An interactive earthquake data analysis project using USGS data, Python, MySQL, and Streamlit to uncover global seismic trends, outliers, and risk zones.
 
+## PPT:
+https://github.com/priyajeyakishore-del/Global-Seismic-Trends/blob/main/Global_Seismic_Trends.pptx
+
+## MYSQL data:
+https://github.com/priyajeyakishore-del/Global-Seismic-Trends/tree/main/sql
+
 ## To Run:
 python -m streamlit run streamlit_app.py
 
