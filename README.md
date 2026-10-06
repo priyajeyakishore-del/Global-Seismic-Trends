@@ -1,8 +1,9 @@
-# Global-Seismic-Trends-
+# Global-Seismic-Trends
 An interactive earthquake data analysis project using USGS data, Python, MySQL, and Streamlit to uncover global seismic trends, outliers, and risk zones.
 
+##  📊 Earthquake Overview
 <img width="1920" height="3293" alt="image" src="https://github.com/user-attachments/assets/92be52e7-77a0-4d91-ac2c-f3ae7f8a38d1" />
-
+##  📈 Earthquake Time Trends
 <img width="1920" height="4029" alt="image" src="https://github.com/user-attachments/assets/3d5f0150-e42f-4154-be3c-aa7fe8d634e0" />
 
 <img width="1920" height="4186" alt="image" src="https://github.com/user-attachments/assets/ab74e71d-6cc1-4077-bfa4-11b2536e167b" />
