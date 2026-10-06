@@ -1,12 +1,24 @@
 # Global-Seismic-Trends-
 An interactive earthquake data analysis project using USGS data, Python, MySQL, and Streamlit to uncover global seismic trends, outliers, and risk zones.
 
-<img width="941" height="451" alt="image" src="https://github.com/user-attachments/assets/19d31937-1817-4e9b-b0ec-710f86a2b823" />
-
-<img width="942" height="383" alt="image" src="https://github.com/user-attachments/assets/138f035f-72ff-49ea-a2aa-b29257acdeb1" />
-
+<img width="1920" height="3293" alt="image" src="https://github.com/user-attachments/assets/92be52e7-77a0-4d91-ac2c-f3ae7f8a38d1" />
 
 <img width="1920" height="4029" alt="image" src="https://github.com/user-attachments/assets/3d5f0150-e42f-4154-be3c-aa7fe8d634e0" />
+
+<img width="1920" height="4186" alt="image" src="https://github.com/user-attachments/assets/ab74e71d-6cc1-4077-bfa4-11b2536e167b" />
+
+<img width="1920" height="4096" alt="image" src="https://github.com/user-attachments/assets/73be0bf2-a11a-44a1-a002-2d480af8ca5f" />
+
+<img width="1920" height="4687" alt="image" src="https://github.com/user-attachments/assets/8edb1a1d-6274-4683-a487-fc6922bfe736" />
+
+<img width="1920" height="3790" alt="image" src="https://github.com/user-attachments/assets/b268da3d-2cd7-42ce-b9f8-72d371f9e36a" />
+
+<img width="1920" height="8711" alt="image" src="https://github.com/user-attachments/assets/45c3f656-c1f9-4806-82c8-aad7c6cbee21" />
+
+
+
+
+
 
 
 
