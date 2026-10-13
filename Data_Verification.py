@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 import sys
-
+#Check structure, types, ranges, missing values and consistency
 output_file = open(
     "data_verification_output.txt",
     "w",
