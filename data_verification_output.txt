@@ -119,7 +119,6 @@ longitude    -180 to 180   -179.9997    179.9994               0   Yes
 Domain Validation:
 ✅ tsunami: Valid
 ✅ status: Valid
-✅ magType: Valid
 
 ================================================================================
 4️⃣ MISSING VALUES

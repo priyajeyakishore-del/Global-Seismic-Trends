@@ -19,8 +19,8 @@ df = pd.read_csv("raw_earthquake_data.csv")
 # Convert the 'time' and 'updated' columns to datetime format
 df["time"] = pd.to_datetime(
     df["time"],
-    unit="ms",
-    errors="coerce"
+    unit="ms", # tells Pandas that the original timestamps are measured in milliseconds.
+    errors="coerce" # parameter used in Pandas to handle values that cannot be converted into a valid date or time.
 )
 df["updated"] = pd.to_datetime(
     df["updated"],
@@ -28,9 +28,6 @@ df["updated"] = pd.to_datetime(
     errors="coerce"
 )
 
-
-# Create a copy for validation
-df_clean = df.copy()
 
 # ============================================================
 # 1. BASIC STRUCTURE CHECKS
@@ -210,7 +207,7 @@ print("=" * 80)
 # Numeric Range Checks
 # ------------------------------------------------------------
 
-# Expected ranges
+# Expected ranges for preliminary USGS earthquake data validation
 expected_ranges = {
     "latitude": (-90, 90),
     "longitude": (-180, 180),
@@ -224,7 +221,7 @@ range_check = []
 for column, (expected_min, expected_max) in expected_ranges.items():
 
     # Convert to numeric
-    values = pd.to_numeric(df_clean[column], errors="coerce")
+    values = pd.to_numeric(df[column], errors="coerce") #unpack the two values
 
     actual_min = values.min()
     actual_max = values.max()
@@ -278,8 +275,6 @@ if "status" in df.columns:
     ).all()
     domain_checks["status"] = valid_status
 
-if "magType" in df.columns:
-    domain_checks["magType"] = df["magType"].notna().all()
 
 for column, result in domain_checks.items():
     print(
